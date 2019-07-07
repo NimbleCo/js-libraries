@@ -1,0 +1,29 @@
+{
+  "name": "@nimbleco/common",
+  "description": "Common tools reused in NimbleCo JS projects",
+  "author": {
+    "name": "Filip Sobalski",
+    "email": "pinkeen@gmail.com",
+    "url": "https://obsrv.in"
+  },
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --declaration",
+    "prepare" : "npm run build"
+  },
+  "dependencies": {
+    "@types/pino": "^5.8.8",
+    "pino": "^5.12.6",
+    "pino-pretty": "^3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.2",
+    "typings": "^2.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

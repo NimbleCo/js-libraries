@@ -1,0 +1,29 @@
+{
+  "name": "@nimbleco/nex-core",
+  "description": "Common tools reused in NimbleCo JS projects",
+  "author": {
+    "name": "Filip Sobalski",
+    "email": "pinkeen@gmail.com",
+    "url": "https://obsrv.in"
+  },
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --declaration",
+    "prepare" : "npm run build"
+  },
+  "dependencies": {
+
+    "@isomorphic-git/lightning-fs": "^3.3.0",
+    "isomorphic-git": "^0.55.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.2",
+    "typings": "^2.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

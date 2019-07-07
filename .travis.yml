@@ -1,0 +1,32 @@
+git:
+  depth: 5
+
+language: node_js
+
+cache:
+  yarn: true
+
+node_js:
+  - 10
+
+env:
+  global:
+    - PATH=$HOME/.yarn/bin:$PATH
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+
+before_script:
+  - yarn run lerna run prepublish
+
+deploy:
+  provider: script
+  script: yarn run lerna:publish
+  skip_cleanup: true
+  on:
+    node: 10
+    tags: true
+
+before_deploy:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+

@@ -1,0 +1,35 @@
+{
+  "name": "@nimbleco/nex",
+  "version": "0.1.0",
+  "dependencies": {
+    "@isomorphic-git/lightning-fs": "^3.3.0",
+    "isomorphic-git": "^0.55.4",
+    "pino": "^5.12.6",
+    "pino-pretty": "^3.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "twig": "^1.13.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@nimbleco/root",
+  "private": true,
+  "description": "Monorepo for all NimbleCo JS projects",
+  "author": {
+    "name": "Filip Sobalski",
+    "email": "pinkeen@gmail.com",
+    "url": "https://obsrv.in"
+  },
+  "devDependencies": {
+    "lerna": "^3.15.0"
+  }
+}
