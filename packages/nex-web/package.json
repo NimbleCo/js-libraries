@@ -1,6 +1,6 @@
 {
   "name": "@nimbleco/nex",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "dependencies": {
     "@isomorphic-git/lightning-fs": "^3.3.0",
     "isomorphic-git": "^0.55.4",
