@@ -8,10 +8,14 @@ cache:
 
 node_js:
   - 10
-
+  -
 env:
   global:
     - PATH=$HOME/.yarn/bin:$PATH
+    - secure: k9IdCTvWR2awWvXm5hiAdDlmLtwLr9nBPODCNb0g2N2DaHbwSfQ++FN01/DuMlf9yBtiDS5ey8fqAm2hLGbiR9q+Km0TPyjFumnm5Jv5bSP8nus1CKmFpGdyPBi7An5j6WmC8ZiM9pyWqOBW9WkFVm3WFti0XTUC0dlCl1uT8eGBHt5Cypx4n/XROzZdj3rgMXMG8pBDThnuA5gZvHVeuGUTcCiRGlpNG/f/QadDJpQ1q6RLTyzYPGVp7Q67r/EhwRavFB6RBokx3ohCRLdVi78ziUrZF4Kj1nFg/3pUXU0FvqfvnPEhgycoSl+ZWRRNeFlHC0fDUlEtN7D1fRqMTKpN4Z0aoV1TaQxTtLqNhQlVuMZE4RyV3Y853kf4kyrWhL4nkZ4lfW2QZOJazqigEG0YiDuNGqqDnfAB9cvgHvBe5wVRh6wIc8V+cgAXDMUKcGUqF0CXnFjPVgO43a6/EyGKs7BOuDvXagC6qyBXFpHj+INTUJiBeqtGlQ448jG3CYQzP2SAXnOPZY48GXHEl1QJhMRIaOGfqhOwKhDOg5kkA9R75gHHGAbNYCj1y3HXT1TkC8jzlS4dVeSmoWuwg8lbsZ4/VILNoGKK66/EUTrPO4SLRT29rGnGDJc81u4SVQEf66N1mn97L1DcU0MMLfNwAjdWYZm0xgnO1NuYqqI=
+
+before_deploy:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -27,6 +31,4 @@ deploy:
     node: 10
     tags: true
 
-before_deploy:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 
